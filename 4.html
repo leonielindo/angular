@@ -1,0 +1,31 @@
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+
+<body>
+<h1>AngularJS Controllers</h1>
+<p>AngularJS applications are controlled by controllers.</p>
+<p>The ng-controller directive defines the controller.</p>
+<p>The controller code will execute when the page loads.</p>
+<br>
+<br>
+<p>Try to change the names.</p>
+
+<div data-ng-app="" ng-controller="personController">
+
+First Name: <input type="text" data-ng-model="firstName"><br>
+Last Name: <input type="text" data-ng-model="lastName"><br>
+<br>
+<p>Full Name: {{firstName + " " + lastName}}</p>
+<p>Full Name: <span data-ng-bind="firstName+ ' ' +lastName"></span></p>
+
+</div>
+
+<script>
+function personController($scope) {
+    $scope.firstName= "John";
+    $scope.lastName= "Doe";
+}
+</script>
+
+</body>
+</html>
